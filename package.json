@@ -1,0 +1,66 @@
+{
+  "name": "lyricalyt",
+  "version": "1.0.0",
+  "description": "Desktop third-party YouTube Music client with dynamic synced lyrics",
+  "main": "dist-electron/main.js",
+  "type": "module",
+  "scripts": {
+    "build:preload": "esbuild electron/preload.ts --bundle --outfile=dist-electron/preload.cjs --format=cjs --platform=node --external:electron",
+    "dev": "npm run build:preload && vite",
+    "build": "npm run build:preload && tsc && vite build",
+    "preview": "vite preview",
+    "dist": "npm run build && electron-builder",
+    "dist:dir": "npm run build && electron-builder --dir"
+  },
+  "build": {
+    "appId": "com.bilekmusic.lyricalyt",
+    "productName": "BilekMusic",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "dist-electron/**/*",
+      "package.json"
+    ],
+    "win": {
+      "icon": "build/icon.ico",
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "BilekMusic"
+    }
+  },
+  "dependencies": {
+    "@distube/ytdl-core": "^5.2.1",
+    "axios": "^1.7.9",
+    "framer-motion": "^11.18.2",
+    "lucide-react": "0.383.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "ytdl-core": "^4.11.5",
+    "ytmusic-api": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.10",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.19",
+    "electron": "^33.2.1",
+    "electron-builder": "^26.18.0",
+    "postcss": "^8.4.38",
+    "tailwindcss": "3.4.17",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11",
+    "vite-plugin-electron": "^0.28.8",
+    "vite-plugin-electron-renderer": "^0.14.6"
+  }
+}
