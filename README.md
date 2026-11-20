@@ -2,7 +2,7 @@
 
 **BilekMusic** adalah desktop music client modern yang dibangun dengan Vite, React, dan Tailwind CSS. Proyek ini menghadirkan pengalaman mendengarkan musik yang imersif dengan antarmuka bersih, lirik tersinkronisasi, dan desain yang terinspirasi dari Apple Music.
 
-!([Tampilan Utama BilekMusic]<img width="1917" height="953" alt="Screenshot 2026-11-20 140822" src="https://github.com/user-attachments/assets/349022b3-8fd7-48e1-9ad9-89b3142e8aec" />)  
+[Tampilan Utama BilekMusic]<img width="1917" height="953" alt="Screenshot 2026-11-20 140822" src="https://github.com/user-attachments/assets/349022b3-8fd7-48e1-9ad9-89b3142e8aec" />
 
 [![Release](https://img.shields.io/github/v/release/Yotan123/BilekMusic?style=flat-square)](https://github.com/Yotan123/BilekMusic/releases)
 [![License](https://img.shields.io/github/license/Yotan123/BilekMusic?style=flat-square)](LICENSE)
